@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Musik Sederhana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Aplikasi Musik Sederhana</h1>
+    <img src="https://via.placeholder.com/150" id="profileImage" alt="Profile Image">
+    
+    <div>
+        <input type="file" accept="image/*" id="uploadInput" style="display: none;">
+        <button id="uploadButton">Pilih Gambar Profil</button>
+    </div>
+
+    <h2>Nama: John Doe</h2>
+    <p>Saya adalah seorang developer web yang menyukai pemrograman dan teknologi.</p>
+    <div>
+        <p>Email: johndoe@example.com</p>
+        <p>Telepon: (123) 456-7890</p>
+    </div>
+
+    <h3>Komentar</h3>
+    <textarea id="commentInput" placeholder="Tulis komentar Anda di sini..." style="width: 100%; height: 100px; margin-bottom: 10px;"></textarea>
+    <button id="submitComment">Kirim Komentar</button>
+    <div id="commentsList"></div>
+
+    <h3>Lagu Favorit</h3>
+    <input type="file" accept="audio/*" id="musicInput" style="display: none;">
+    <button id="musicButton">Tambahkan Lagu</button>
+    <div id="musicList" class="music-list"></div>
+
+    <!-- Music Player -->
+    <div class="wrapper">
+        <div class="img-area">
+            <img src="" alt="Music Cover" />
+        </div>
+        <div class="song-details">
+            <div class="name">Song Name</div>
+            <div class="artist">Artist Name</div>
+        </div>
+        <div class="controls">
+            <button id="prev"><i class="fas fa-backward"></i></button>
+            <button class="play-pause"><i class="fas fa-play-circle"></i></button>
+            <button id="next"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar"></div>
+        </div>
+        <audio id="main-audio"></audio>
+    </div>
+</div>
+
+<!-- Menghubungkan file JavaScript -->
+<script src="app.js"></script>
+</body>
+</html>
